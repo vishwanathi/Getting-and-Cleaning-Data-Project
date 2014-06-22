@@ -13,7 +13,7 @@ Version 1.0
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova.
+DITEN - Universitï¿½ degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
@@ -41,6 +41,18 @@ The repo includes the following files:
 
 - 'run_analysis.R': An R source-code that creates the tidy dataset from the raw files.
 
+
+=========================================
+
+The run_analysis.R script file reads in the raw data, and goes through the following steps:
+
+1. Reads the data for each subject, and also the subject identifier, and the activity type
+2. Row binds the test and training set to create one full dataset
+3. Reads in the features.txt file which contains the column names, and cleans up special characters
+4. Keeps only the variables that are means or standard deviations
+5. Formats the activity to label values
+6. Uses melt and dcast to create averages for each subject and activity type
+7. Prefixes column names, and writes out the dataset to a tab-delimited text file
 
 =========================================
 
